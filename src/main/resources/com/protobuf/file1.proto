@@ -1,0 +1,38 @@
+package tutorial;
+
+option java_package = "com.example.tutorial";
+option java_outer_classname = "FooBarProto";
+
+message Shape {
+
+    extensions 100 to max;
+
+    enum Type
+    {
+        Circle = 1;
+        Rectangle = 2;
+    }
+
+    required Type type  = 1;
+    required fixed32 id = 2;
+}
+
+message Circle {
+
+    extend Shape {
+        optional Circle shape = 100; // Unique Shape extension number
+    }
+
+    // These fields can use the full number range.
+    optional bool declawed = 1;
+}
+
+message Rectangle {
+    
+    extend Shape {
+        optional Rectangle shape = 101; // Unique Shape extension number
+    }
+
+    // These fields can use the full number range.
+    optional uint32 bones_buried = 1;
+}
