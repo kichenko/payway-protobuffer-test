@@ -1,0 +1,11 @@
+package com.example.tutorial;
+import "Animal.proto";
+
+message Cat {
+
+    extend Animal {
+        optional Cat animal = 100;
+    }
+
+    optional bool declawed = 1;
+}

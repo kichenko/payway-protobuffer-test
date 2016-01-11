@@ -1,0 +1,12 @@
+package com.example.tutorial;
+import "Cat.proto";
+import "Dog.proto";
+
+message Packet {
+    extensions 100 to max;
+}
+
+extend Packet {
+    optional Request request = 100;
+    optional Response response = 101;
+}

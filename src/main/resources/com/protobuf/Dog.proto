@@ -1,0 +1,11 @@
+package com.example.tutorial;
+import "Animal.proto";
+
+message Dog {
+    
+    extend Animal {
+        optional Dog animal = 101;
+    }
+
+    optional uint32 bones_buried = 1;
+}

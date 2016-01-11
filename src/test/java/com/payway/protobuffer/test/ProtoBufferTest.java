@@ -3,7 +3,6 @@
  */
 package com.payway.protobuffer.test;
 
-import com.example.tutorial.FooBarProto;
 import org.testng.annotations.Test;
 
 /**
@@ -16,13 +15,23 @@ public class ProtoBufferTest {
 
     @Test
     public void test() {
+        
+        //com.example.tutorial.RequestOuterClass.Request.newBuilder().build().h
+        
+        //com.example.tutorial.CatOuterClass.Cat.newBuilder().
+
+        /*
+        final FooBarProto.Cat cat = FooBarProto.Cat.newBuilder()
+                .setDeclawed(true)
+                .build();
 
         final FooBarProto.Animal animal = FooBarProto.Animal.newBuilder()
                 .setId(1)
                 .setType(FooBarProto.Animal.Type.Cat)
-                .setExtension(FooBarProto.Cat.animal, FooBarProto.Cat.newBuilder().build())
+                .setExtension(FooBarProto.Cat.animal, cat)
                 .build();
 
-        animal.getExtension(FooBarProto.Cat.animal).getDeclawed();
+        boolean flag = animal.getExtension(FooBarProto.Cat.animal).getDeclawed();
+                */
     }
 }

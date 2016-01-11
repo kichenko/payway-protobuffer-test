@@ -1,0 +1,13 @@
+package com.example.tutorial;
+
+message Animal {    
+    extensions 100 to max;
+
+    enum Type {
+        Cat = 1;
+        Dog = 2;
+    }
+
+    required int64 id = 1;
+    required Type type = 2;
+}

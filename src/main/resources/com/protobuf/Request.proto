@@ -1,0 +1,12 @@
+package com.example.tutorial;
+import "Cat.proto";
+import "Dog.proto";
+
+message Request {
+    extensions 100 to max;
+}
+
+extend Request {
+    optional Cat cat = 100;
+    optional Dog dog = 101;
+}
